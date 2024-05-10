@@ -12,13 +12,14 @@ export const useDnD = (name: CalcElementName) => {
 	const changeElementOfConstructor = (item: { name: CalcElementName }) => {
 		if (item.name === CalcElementName.DISPLAY) {
 			dispatch(setDisplay(true))
+		} else {
+			dispatch(
+				changeElementPositionInConstructor({
+					name: item.name,
+					replaceableEl: name,
+				})
+			)
 		}
-		dispatch(
-			changeElementPositionInConstructor({
-				name,
-				replaceableEl: CalcElementName.EQUAL,
-			})
-		)
 	}
 
 	const [{ isHover, getItem }, dropTarget] = useDrop({
@@ -34,7 +35,7 @@ export const useDnD = (name: CalcElementName) => {
 
 	const [{}, dragRef] = useDrag(() => ({
 		type: "calcElement",
-		item: { name: CalcElementName.EQUAL },
+		item: { name },
 		collect: (monitor) => ({}),
 	}))
 
