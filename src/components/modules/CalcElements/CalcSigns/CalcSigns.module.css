@@ -1,0 +1,22 @@
+.signs__wrap{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+    padding: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .06), 0 4px 6px rgba(0, 0, 0, .1);
+    column-gap: 8px;
+}
+
+.sign{
+    background: #fff;
+    border: 1px solid #e2e3e5;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    width: 100%;
+}
+
+.signs__opacity{
+    opacity: 0.5;
+}

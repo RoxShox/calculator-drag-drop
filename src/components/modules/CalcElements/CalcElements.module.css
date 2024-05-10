@@ -1,0 +1,4 @@
+.calc__wrapper_inactive{
+    overflow: hidden;
+    visibility: hidden;
+}

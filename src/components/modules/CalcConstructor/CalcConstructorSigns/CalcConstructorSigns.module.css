@@ -1,0 +1,27 @@
+.signs__wrap {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    border-radius: 4px;
+    padding: 8px 4px 8px;
+    column-gap: 8px;
+}
+
+.sign {
+    background: #fff;
+    border: 1px solid #e2e3e5;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+        border: 2px solid #5d5fef;
+        transition: border ease .1s;
+    }
+    &:active {
+        transition: all .1s;
+        background: #5d5fef;
+        color: #fff;
+    }
+}

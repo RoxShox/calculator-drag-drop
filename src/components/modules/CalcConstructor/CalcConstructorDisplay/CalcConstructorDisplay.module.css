@@ -1,0 +1,14 @@
+.display {
+    height: 60px;
+    padding: 4px 4px 8px;
+}
+
+.display__value {
+    background-color: #f3f4f6;
+    font-size: 38px;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 4px 8px;
+    text-align: end;
+    width: 100%;
+}

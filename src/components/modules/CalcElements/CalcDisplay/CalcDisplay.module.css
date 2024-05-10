@@ -1,0 +1,25 @@
+.display {
+    border-radius: 4px;
+    max-width: 240px;
+    width: 100%;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    background: #fff;
+    height: 60px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.display__value{
+    background-color: #f3f4f6;
+    font-size: 38px;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 4px 8px;
+    text-align: end;
+    width: 100%;
+}
+
+.display__opacity{
+    opacity: 0.5;
+}
