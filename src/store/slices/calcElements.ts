@@ -32,6 +32,14 @@ export const calcElementsSlice = createSlice({
 
 			state.dropCalcElements = [...state.dropCalcElements, action.payload]
 		},
+		removeElement: (state, action) => {
+			if (action.payload === CalcElementName.DISPLAY) {
+				state.isDropDisplay = false
+			}
+			state.dropCalcElements = state.dropCalcElements.filter(
+				(el) => el !== action.payload
+			)
+		},
 		changeElementPositionInConstructor: (
 			state,
 			action: PayloadAction<IChangeElementPositionAction>
@@ -60,14 +68,6 @@ export const calcElementsSlice = createSlice({
 					...rightSide,
 				]
 			}
-		},
-		removeElement: (state, action) => {
-			if (action.payload === CalcElementName.DISPLAY) {
-				state.isDropDisplay = false
-			}
-			state.dropCalcElements = state.dropCalcElements.filter(
-				(el) => el !== action.payload
-			)
 		},
 	},
 })
